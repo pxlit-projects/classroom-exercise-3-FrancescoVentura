@@ -10,4 +10,6 @@ public class Settler {
     public boolean isAssignedToDefense() {
         return assignedToDefense;
     }
+
+
 }
