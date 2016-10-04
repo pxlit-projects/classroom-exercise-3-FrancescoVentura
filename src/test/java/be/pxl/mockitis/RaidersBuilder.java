@@ -12,8 +12,11 @@ public class RaidersBuilder {
         return this;
     }
 
-    public RaidersBuilder withRaiders(List<Raider> raiders) {
-        this.raiders = raiders;
+    public RaidersBuilder withRaiders(int amountOfRaiders) {
+        for (int i = 0; i < amountOfRaiders; i++) {
+            this.raiders.add(new Raider());
+        }
+
         return this;
     }
 
@@ -22,4 +25,5 @@ public class RaidersBuilder {
         raiders.addAttacker(new Raider());
         return raiders;
     }
+
 }

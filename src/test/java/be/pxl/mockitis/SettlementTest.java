@@ -17,13 +17,8 @@ public class SettlementTest {
 
     @Test
     public void settlement_WhenMoreSettlersAssignedToDefenseThanAmountOfRaiders_CanDefendItself() throws Exception {
-        ArrayList<Raider> raidersThatWillAttackYourBase = new ArrayList<>();
 
-        for (int i = 0; i < 1; i++) {
-            raidersThatWillAttackYourBase.add(new Raider());
-        }
-
-        Raiders raiders = new RaidersBuilder().withRaiders(raidersThatWillAttackYourBase).withHasLegendary(false).build();
+        Raiders raiders = new RaidersBuilder().withRaiders(1).withHasLegendary(false).build();
 
         Settler defender = new SettlerBuilder().withAssignedToDefense(true).build();
         Settler farmer = new SettlerBuilder().withAssignedToDefense(false).build();
@@ -37,13 +32,8 @@ public class SettlementTest {
 
     @Test
     public void settlement_WhenEqualSettlersAssignedToDefenseThanAmountOfRaiders_CanDefendItself() throws Exception {
-        ArrayList<Raider> raidersThatWillAttackYourBase = new ArrayList<>();
 
-        for (int i = 0; i < 2; i++) {
-            raidersThatWillAttackYourBase.add(new Raider());
-        }
-
-        Raiders raiders = new RaidersBuilder().withRaiders(raidersThatWillAttackYourBase).withHasLegendary(false).build();
+        Raiders raiders = new RaidersBuilder().withRaiders(2).withHasLegendary(false).build();
 
         Settler defender = new SettlerBuilder().withAssignedToDefense(true).build();
         Settler farmer = new SettlerBuilder().withAssignedToDefense(true).build();
@@ -57,13 +47,8 @@ public class SettlementTest {
 
     @Test
     public void settlement_WhenLessSettlersAssignedToDefenseThanAmountOfRaiders_CanNotDefendItself() throws Exception {
-        ArrayList<Raider> raidersThatWillAttackYourBase = new ArrayList<>();
-
-        for (int i = 0; i < 2; i++) {
-            raidersThatWillAttackYourBase.add(new Raider());
-        }
-
-        Raiders raiders = new RaidersBuilder().withRaiders(raidersThatWillAttackYourBase).withHasLegendary(false).build();
+        
+        Raiders raiders = new RaidersBuilder().withRaiders(2).withHasLegendary(false).build();
 
         Settler defender = new SettlerBuilder().withAssignedToDefense(true).build();
         Settler farmer = new SettlerBuilder().withAssignedToDefense(false).build();
